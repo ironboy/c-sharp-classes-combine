@@ -1,4 +1,8 @@
-﻿/*PetOwner gabriella = new("Gabriella", "Gustavsson", "gabriella@snakelovers.com");
+﻿
+
+// FIRST EXAMPLE: REMOVE MULTILINE COMMENT TO RUN
+/*
+PetOwner gabriella = new("Gabriella", "Gustavsson", "gabriella@snakelovers.com");
 Pet sirHiss = new("Sir Hiss", "snake");
 Pet mrMouse = new("Mr Mouse", "mouse");
 
@@ -9,8 +13,12 @@ Console.WriteLine(gabriella.TellAboutMyPets());
 Console.WriteLine("");
 Console.WriteLine(sirHiss.TellAboutMyOwner());
 Console.WriteLine("");
-Console.WriteLine(mrMouse.TellAboutMyOwner());*/
+Console.WriteLine(mrMouse.TellAboutMyOwner());
+*/
 
+
+// SECOND EXAMPLE: REMOVE MULTILINE COMMENT TO RUN
+/*
 List<PetOwner> owners = [];
 List<Pet> pets = [];
 
@@ -71,8 +79,22 @@ while (true)
     else if (choice == "5")
     {
         // Let a petowner buy a pet
-        int ownerIndex = int.Parse(Ask("Vilken djurägare? (angNummer)")) - 1;
-        int petIndex = int.Parse(Ask("Vilket djur? (angNummer)")) - 1;
+        int ownerIndex = int.Parse(Ask("Vilken djurägare? (ange nummer)")) - 1;
+        int petIndex = int.Parse(Ask("Vilket djur? (ange nummer)")) - 1;
         owners[ownerIndex].BuyPet(pets[petIndex]);
     }
+}*/
+
+// THIRD EXAMPLE: INHERITANCE / POLYMORFISM
+List<Pet> pets = [
+    new Dog("Fido"),
+    new Cat("Garfield"),
+    new Dog("Lassie"),
+    new Pet("Sir Hiss", "snake")
+];
+
+foreach (Pet pet in pets)
+{
+    Console.WriteLine(pet.SayHi());
 }
+

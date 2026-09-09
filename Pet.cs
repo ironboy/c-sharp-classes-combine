@@ -6,7 +6,7 @@ class Pet(string name, string species)
     public PetOwner? Owner;
 
     // SayHi -> who am i
-    public string SayHi()
+    public virtual string SayHi()
     {
         return $"I am the {Species} {Name}!";
     }
