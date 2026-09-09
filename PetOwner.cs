@@ -15,7 +15,11 @@ class PetOwner(string firstName, string lastName, string email)
     public void BuyPet(Pet newPet)
     {
         // Add the pet to my list of pets
-        pets.Add(newPet);
+        // if i don't already own it
+        if (!pets.Contains(newPet))
+        {
+            pets.Add(newPet);
+        }
         // Set the owner field of the pet
         // NOTE: this -> me the instance running the method
         newPet.Owner = this;
